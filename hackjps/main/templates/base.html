@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    
+    <title>{% block title %}My Site{% endblock %}</title>
+</head>
+<body>
+    <div class="nav">
+       <div class="left">
+        <h1 class="logo"><a href="/">Edison's Path</a></h1>
+       </div>
+       <div class="right">
+        {% if user.is_authenticated == False %}
+        <h1 class="header border"><a href="/login">Login</a></h1>
+        <h1 class="header"><a href="/sign-up">Sign Up</a></h1>
+        {% endif %}
+        <h1 class="header"><a href="/about">About Us</a></h1>
+        {% if user.is_authenticated  %}
+        <h1 class="header"><a href="/dashboard">Dashboard</a></h1>
+         <h1 class="header"><a href="/logout">Log Out</a></h1>
+         <span class="navbar-text">Logged in as {{user.username}} | </span>
+        {% endif %}
+       </div>
+    </div>
+    <div class="">{% block content %} {% endblock %}</div>
+</body>
+</html>

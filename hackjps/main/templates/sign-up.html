@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <p class="account">Have an account? Log in <a href="/login">Here</a>!</p>
+  <button type="submit">Register</button>
+</form>
+{% endblock %}
+
+

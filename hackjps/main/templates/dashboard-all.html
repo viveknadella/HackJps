@@ -1,0 +1,59 @@
+{% extends './base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<style>
+    .time-display {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .arrival-time {
+      font-weight: bold;
+      font-size: 25px;
+    }
+  
+    .map-container {
+      height: 200px;
+      width: 45%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      
+    }
+
+    .driver {
+        text-align: center;
+        color: green;
+        font-size: 40px;
+    }
+
+    .reg {
+        text-align: center;
+        color: red;
+        font-size: 40px;
+        margin-top:20px;
+    }
+
+    .container-main {
+        margin-top: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 50%;
+        padding: 70px;
+        height: 400px;
+    }
+  </style>
+  <div class="container-main">
+
+<div class="map-container">
+    {{ map | safe }}
+    <p class="arrival-time reg">You</p>
+
+
+</div>
+</div>
+
+
+
+{% endblock %}

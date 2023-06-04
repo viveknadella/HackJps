@@ -1,0 +1,53 @@
+/* sign-up.css */
+
+/* Style the form table */
+form table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style form labels */
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style form inputs */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style radio buttons */
+  form input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* Style the "Have an account" link */
+  .account {
+    margin-top: 20px;
+  }
+  
+  /* Style the submit button */
+  form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Add styles for the error messages */
+  form ul.errorlist {
+    color: red;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
